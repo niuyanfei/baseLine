@@ -4,16 +4,23 @@
 <meta charset="utf-8"> 
 <title>菜鸟教程(runoob.com)</title> 
 </head>
-<body>
-	<h1>上涨趋势</h1>
-	<div> 低点A: <input type="number" id ="a" value="a_value" type="number"  min="0.000000" step="0.00001"  /><br></div>
-	<div> 高点B: <input type="number" id ="b" value="b_value" type="number"  min="0.000000" step="0.00001"  /><br></div>
-	<div> 低点C: <input type="number" id ="c" value="c_value" type="number"  min="0.000000" step="0.00001"  /><br></div>
-	<p></p>
-	<div><input type="submit" onclick="calc();">
-		<label id ="result"></label>
-	</div>
-  
+	  <style> 
+div #result
+{
+	border:2px solid #a1a1a1;
+	padding:10px 40px; 
+	background:#dddddd;
+	display:block;
+	width:100px;
+	height:10px;
+	border-radius:5px;
+}
+	 #main
+	{
+		padding:40% 40%;
+		
+		  }
+</style>
 <script type="application/javascript">
 	function calc(){
 	
@@ -24,6 +31,18 @@
 	
 	}
 	</script>
+<body>
+   <div id ="main">
+	<h1>上涨趋势</h1>
+	<div> 低点A: <input type="number" id ="a" value="a_value" type="number"  min="0.000000" step="0.00001"  /><br></div>
+	<div> 高点B: <input type="number" id ="b" value="b_value" type="number"  min="0.000000" step="0.00001"  /><br></div>
+	<div> 低点C: <input type="number" id ="c" value="c_value" type="number"  min="0.000000" step="0.00001"  /><br></div>
+	<p></p>
+	<div><input type="submit" onclick="calc();">
+		<p></p>
+		<label id ="result"></label>
+	</div>
+ </div>
 
 </body>
 </html>
