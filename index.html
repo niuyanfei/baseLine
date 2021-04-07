@@ -40,7 +40,7 @@ div #result,#resultD, #result1,#resultD1
 	var d1 = document.getElementById("d1").value;
 	document.getElementById("result1").innerText = ((c1-b1)/(a1-b1)).toFixed(5);
 	var rr  = (c1-b1)/(a1-b1)*(a1-d1)+d1;
-	document.getElementById("resultD1").innerText = rr.toFixed(5);
+	document.getElementById("resultD1").innerText = Number(rr).toFixed(5);
 	
 	}
 	</script>
