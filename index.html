@@ -5,7 +5,7 @@
 <title>趋势计算</title>
 </head>
 	  <style> 
-div #result,#resultD
+div #result,#resultD, #result1,#resultD1
 {
 	border:2px solid #a1a1a1;
 	padding:10px 40px; 
@@ -32,6 +32,16 @@ div #result,#resultD
 	document.getElementById("resultD").innerText = (d-(b-c)/(b-a)*(d-a)).toFixed(5);
 	
 	}
+	function calc1(){
+	
+	var a1 = document.getElementById("a1").value; 
+    var b1 = document.getElementById("b1").value;
+	var c1 = document.getElementById("c1").value;
+	var d1 = document.getElementById("d1").value;
+	document.getElementById("result1").innerText = ((c1-b1)/(a1-b1)).toFixed(5);
+	document.getElementById("resultD1").innerText = (d1+(c1-b1)/(a1-b1)*(a1-d1)).toFixed(5);
+	
+	}
 	</script>
 <body>
    <div id ="main">
@@ -48,6 +58,20 @@ div #result,#resultD
 			<p></p>
 		<button>新D点的C节奏线：</button>
 		<label id ="resultD"></label>
+	</div>
+	   	<h1>下降趋势</h1>
+	<div> 高点A: <input type="number" id ="a1" value="a1_value" type="number"  min="0.000000" step="0.00001"  /><br></div>
+	<div> 低点B: <input type="number" id ="b1" value="b1_value" type="number"  min="0.000000" step="0.00001"  /><br></div>
+	<div> 高点C: <input type="number" id ="c1" value="c1_value" type="number"  min="0.000000" step="0.00001"  /><br></div>
+	<div> 新低点D: <input type="number" id ="d1" value="d1_value" type="number"  min="0.000000" step="0.00001"  /><br></div>
+	<p></p>
+	<div><input type="submit" onclick="calc1();">
+		<p></p>
+		<button>C点下调率：</button>
+		<label id ="result1"></label>
+			<p></p>
+		<button>新D点的C节奏线：</button>
+		<label id ="resultD1"></label>
 	</div>
  </div>
 
